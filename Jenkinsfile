@@ -13,7 +13,7 @@ pipeline {
         stage('Checkout') {
             agent { label 'agent1' }
             steps {
-                git branch: 'master', url:'https://github.com/Jamerl-1210/guestbook.git'
+                git branch: 'master', url:'https://github.com/Jamerl-1210/geustbook.git'
             }
         }
         stage('Build') {
@@ -73,7 +73,7 @@ pipeline {
         stage('Docker Image Build') {
             agent { label 'agent2' }
             steps {
-                git branch: 'master', url:'https://github.com/Jamerl-1210/guestbook.git'
+                git branch: 'master', url:'https://github.com/Jamerl-1210/geustbook.git'
                 sh './mvnw clean package'
                 script {
                     //oDockImage = docker.build(strDockerImage)
