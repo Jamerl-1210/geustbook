@@ -1,0 +1,78 @@
+2025-07-10 06:09:35,491 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2025-07-10 06:09:35,517 INFO o.a.j.JMeter: Loading user properties from: /root/lab/sw/apache-jmeter-5.6.3/bin/user.properties
+2025-07-10 06:09:35,518 INFO o.a.j.JMeter: Loading system properties from: /root/lab/sw/apache-jmeter-5.6.3/bin/system.properties
+2025-07-10 06:09:35,526 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-07-10 06:09:35,526 INFO o.a.j.JMeter: Version 5.6.3
+2025-07-10 06:09:35,526 INFO o.a.j.JMeter: java.version=17.0.15
+2025-07-10 06:09:35,526 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-07-10 06:09:35,526 INFO o.a.j.JMeter: os.name=Linux
+2025-07-10 06:09:35,526 INFO o.a.j.JMeter: os.arch=amd64
+2025-07-10 06:09:35,527 INFO o.a.j.JMeter: os.version=5.14.0-427.20.1.el9_4.x86_64
+2025-07-10 06:09:35,527 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-07-10 06:09:35,527 INFO o.a.j.JMeter: java.awt.headless=true
+2025-07-10 06:09:35,527 INFO o.a.j.JMeter: Max memory     =939524096
+2025-07-10 06:09:35,527 INFO o.a.j.JMeter: Available Processors =2
+2025-07-10 06:09:35,537 INFO o.a.j.JMeter: Default Locale=English (United States)
+2025-07-10 06:09:35,538 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2025-07-10 06:09:35,538 INFO o.a.j.JMeter: JMeterHome=/root/lab/sw/apache-jmeter-5.6.3
+2025-07-10 06:09:35,538 INFO o.a.j.JMeter: user.dir  =/root/.jenkins/workspace/guestbook
+2025-07-10 06:09:35,538 INFO o.a.j.JMeter: PWD       =/root/.jenkins/workspace/guestbook
+2025-07-10 06:09:35,541 INFO o.a.j.JMeter: IP: 172.31.0.100 Name: controller FullName: ip-172-31-0-100.ap-northeast-2.compute.internal
+2025-07-10 06:09:35,563 INFO o.a.j.s.FileServer: Default base='/root/.jenkins/workspace/guestbook'
+2025-07-10 06:09:35,565 INFO o.a.j.s.FileServer: Set new base='/root/.jenkins/workspace/guestbook/src/main/jmx'
+2025-07-10 06:09:35,965 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-07-10 06:09:36,011 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-07-10 06:09:36,015 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-07-10 06:09:36,020 INFO o.a.j.s.SaveService: Loading file: src/main/jmx/guestbook_loadtest.jmx
+2025-07-10 06:09:36,161 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-07-10 06:09:36,161 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-07-10 06:09:36,161 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-07-10 06:09:36,162 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-07-10 06:09:36,162 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-07-10 06:09:36,162 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-07-10 06:09:36,197 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-07-10 06:09:36,223 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-07-10 06:09:36,226 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-07-10 06:09:36,226 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-07-10 06:09:36,237 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-07-10 06:09:36,237 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-07-10 06:09:36,332 INFO o.a.j.r.ClassFinder: Will scan jar /root/lab/sw/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-07-10 06:09:36,468 INFO o.a.j.r.ClassFinder: Will scan jar /root/lab/sw/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-tst-2.6.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-07-10 06:09:36,470 INFO o.a.j.r.ClassFinder: Will scan jar /root/lab/sw/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-perfmon-2.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-07-10 06:09:36,479 INFO o.a.j.r.ClassFinder: Will scan jar /root/lab/sw/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-functions-2.2.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-07-10 06:09:36,485 INFO o.a.j.r.ClassFinder: Will scan jar /root/lab/sw/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-dummy-0.4.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-07-10 06:09:36,489 INFO o.a.j.r.ClassFinder: Will scan jar /root/lab/sw/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-graphs-basic-2.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-07-10 06:09:36,493 INFO o.a.j.r.ClassFinder: Will scan jar /root/lab/sw/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-casutg-2.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-07-10 06:09:36,521 INFO o.a.j.r.ClassFinder: Will scan jar /root/lab/sw/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-ffw-2.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-07-10 06:09:36,523 INFO o.a.j.r.ClassFinder: Will scan jar /root/lab/sw/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-fifo-0.2.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-07-10 06:09:36,538 INFO o.a.j.JMeter: Running test (1752127776538)
+2025-07-10 06:09:36,570 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TG_Guestbook
+2025-07-10 06:09:36,570 INFO o.a.j.e.StandardJMeterEngine: Starting 5 threads for group TG_Guestbook.
+2025-07-10 06:09:36,570 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-07-10 06:09:36,570 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 5
+2025-07-10 06:09:36,581 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-07-10 06:09:36,582 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-07-10 06:09:36,582 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-07-10 06:09:36,582 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-07-10 06:09:36,594 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2025-07-10 06:09:36,594 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-07-10 06:09:38,571 INFO o.a.j.t.JMeterThread: Thread started: TG_Guestbook 1-5
+2025-07-10 06:09:39,599 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = controller
+2025-07-10 06:09:39,627 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-07-10 06:09:40,572 INFO o.a.j.t.JMeterThread: Thread started: TG_Guestbook 1-4
+2025-07-10 06:09:40,771 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2025-07-10 06:09:40,771 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2025-07-10 06:09:42,571 INFO o.a.j.t.JMeterThread: Thread started: TG_Guestbook 1-3
+2025-07-10 06:09:44,571 INFO o.a.j.t.JMeterThread: Thread started: TG_Guestbook 1-2
+2025-07-10 06:09:46,571 INFO o.a.j.t.JMeterThread: Thread started: TG_Guestbook 1-1
+2025-07-10 06:11:49,888 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG_Guestbook 1-5
+2025-07-10 06:11:49,888 INFO o.a.j.t.JMeterThread: Thread finished: TG_Guestbook 1-5
+2025-07-10 06:11:52,129 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG_Guestbook 1-4
+2025-07-10 06:11:52,130 INFO o.a.j.t.JMeterThread: Thread finished: TG_Guestbook 1-4
+2025-07-10 06:11:52,155 INFO o.a.j.t.JMeterThread: Thread finished: TG_Guestbook 1-3
+2025-07-10 06:11:55,940 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG_Guestbook 1-2
+2025-07-10 06:11:55,940 INFO o.a.j.t.JMeterThread: Thread finished: TG_Guestbook 1-2
+2025-07-10 06:11:59,172 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG_Guestbook 1-1
+2025-07-10 06:11:59,172 INFO o.a.j.t.JMeterThread: Thread finished: TG_Guestbook 1-1
+2025-07-10 06:11:59,173 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-07-10 06:11:59,174 INFO o.a.j.r.Summariser: summary =      5 in 00:02:23 =    0.0/s Avg:  4414 Min:     0 Max:  6024 Err:     0 (0.00%)

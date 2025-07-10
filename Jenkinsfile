@@ -3,7 +3,7 @@ import java.text.SimpleDateFormat
 def TODAY = (new SimpleDateFormat("yyyyMMddHHmmss")).format(new Date())
 
 pipeline {
-    agent any
+    agent { label 'master' }
     environment {
         strDockerTag = "${TODAY}_${BUILD_ID}"
         strDockerImage ="jamerl1210/cicd_guestbook:${strDockerTag}"
@@ -11,16 +11,19 @@ pipeline {
 
     stages {
         stage('Checkout') {
+            agent { label 'agent1' }
             steps {
-                git branch: 'master', url:'https://github.com/Jamerl-1210/geustbook.git'
+                git branch: 'master', url:'https://github.com/Jamerl-1210/guestbook.git'
             }
         }
         stage('Build') {
+            agent { label 'agent1' }
             steps {
                 sh './mvnw clean package'
             }
         }
         stage('Unit Test') {
+            agent { label 'agent1' }
             steps {
                 sh './mvnw test'
             }
@@ -33,6 +36,7 @@ pipeline {
         }
 
         stage('SonarQube Analysis') {
+            agent { label 'agent1' }
             steps{
                 echo 'SonarQube Analysis'
                 /*
@@ -48,6 +52,7 @@ pipeline {
             }
         }
         stage('SonarQube Quality Gate'){
+            agent { label 'agent1' }
             steps{
                 echo 'SonarQube Quality Gate'
                 /*
@@ -66,7 +71,10 @@ pipeline {
             }
         }
         stage('Docker Image Build') {
+            agent { label 'agent2' }
             steps {
+                git branch: 'master', url:'https://github.com/Jamerl-1210/guestbook.git'
+                sh './mvnw clean package'
                 script {
                     //oDockImage = docker.build(strDockerImage)
                     oDockImage = docker.build(strDockerImage, "--build-arg VERSION=${strDockerTag} -f Dockerfile .")
@@ -74,6 +82,7 @@ pipeline {
             }
         }
         stage('Docker Image Push') {
+            agent { label 'agent2' }
             steps {
                 script {
                     docker.withRegistry('', 'DockerHub_Credential') {
@@ -83,6 +92,7 @@ pipeline {
             }
         }
         stage('Staging Deploy') {
+            agent { label 'master' }
             steps {
                 sshagent(credentials: ['Staging-PrivateKey']) {
                     sh "ssh -o StrictHostKeyChecking=no root@3.36.94.26 docker container rm -f guestbookapp"
@@ -99,21 +109,24 @@ pipeline {
                 }
             }
         }
+        stage ('JMeter LoadTest') {
+            agent { label 'agent1' }
+            steps { 
+                sh '~/lab/sw/jmeter/bin/jmeter.sh -j jmeter.save.saveservice.output_format=xml -n -t src/main/jmx/guestbook_loadtest.jmx -l loadtest_result.jtl' 
+                perfReport filterRegex: '', showTrendGraphs: true, sourceDataFiles: 'loadtest_result.jtl' 
+            } 
+        }
     }
-    post { 
+    post {
         success { 
-            slackSend(tokenCredentialId: 'slack-token'
-                , channel: '#교육'
-                , color: 'good'
-                , message: "${JOB_NAME} (${BUILD_NUMBER}) 빌드가 성공적으로 끝났습니다. Details: (<${BUILD_URL} | here >)")
             slackSend(tokenCredentialId: 'slack-token-raon'
-                , channel: '@고병욱'
+                , channel: '@U085DST5970'
                 , color: 'good'
                 , message: "${JOB_NAME} (${BUILD_NUMBER}) 빌드가 성공적으로 끝났습니다. Details: (<${BUILD_URL} | here >)")
         }
         failure { 
-            slackSend(tokenCredentialId: 'slack-token'
-                , channel: '#교육'
+            slackSend(tokenCredentialId: 'slack-token-raon'
+                , channel: '@U085DST5970'
                 , color: 'danger'
                 , message: "${JOB_NAME} (${BUILD_NUMBER}) 빌드가 실패하였습니다. Details: (<${BUILD_URL} | here >)")
     }
