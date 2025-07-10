@@ -101,14 +101,13 @@ pipeline {
         }
     }
     post { 
-        always { 
-            emailext (attachLog: true, body: '본문', compressLog: true
-                    , recipientProviders: [buildUser()], subject: '제목', to: 'yu3papa.j@gmail.com')
-
-        }
         success { 
             slackSend(tokenCredentialId: 'slack-token'
                 , channel: '#교육'
+                , color: 'good'
+                , message: "${JOB_NAME} (${BUILD_NUMBER}) 빌드가 성공적으로 끝났습니다. Details: (<${BUILD_URL} | here >)")
+            slackSend(tokenCredentialId: 'slack-token-raon'
+                , channel: '고병욱'
                 , color: 'good'
                 , message: "${JOB_NAME} (${BUILD_NUMBER}) 빌드가 성공적으로 끝났습니다. Details: (<${BUILD_URL} | here >)")
         }
