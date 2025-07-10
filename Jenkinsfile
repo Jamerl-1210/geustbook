@@ -107,7 +107,7 @@ pipeline {
                 , color: 'good'
                 , message: "${JOB_NAME} (${BUILD_NUMBER}) 빌드가 성공적으로 끝났습니다. Details: (<${BUILD_URL} | here >)")
             slackSend(tokenCredentialId: 'slack-token-raon'
-                , channel: '고병욱'
+                , channel: '@고병욱'
                 , color: 'good'
                 , message: "${JOB_NAME} (${BUILD_NUMBER}) 빌드가 성공적으로 끝났습니다. Details: (<${BUILD_URL} | here >)")
         }
